@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Nike</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #111;
+    overflow-x: hidden;
+    background-color: #f8f8f8;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 2rem;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #DC143C;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 6rem 2rem 2rem 2rem; /* margin-top accounts for fixed header */
+    color: #6D6D6D;
+  }
+
+  .about-content {
+    max-width: 1000px;
+    margin: 2rem auto 5rem auto;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .about-section {
+    margin-bottom: 3rem;
+  }
+
+  .about-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #111;
+  }
+
+  .about-section p {
+    margin-bottom: 1rem;
+  }
+
+  /* Footer styles */
+  .footer {
+    background: #2C2C2C;
+    color: white;
+    padding: 3rem 2rem 1rem;
+    text-align: center;
+  }
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer-links a:hover {
+    color: #DC143C;
+  }
+
+  /* Responsive adjustments */
+  @media(max-width: 768px) {
+    .nav {
+      flex-direction: column;
+    }
+  }
+
+  /* Fade-in effect (optional for sections) */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+</style>
+</head>
+<body>
+<header class="header">
+  <nav class="nav">
+    <a href="index.html" class="logo">NIKE</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<h2 class="section-title fade-in" id="about">About Nike</h2>
+<div class="about-content">
+  <section class="about-section fade-in">
+    <h3>Our Heritage</h3>
+    <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. Founded in 1964, Nike has grown to become one of the most recognized brands in the world, inspiring athletes and consumers alike with innovative products and compelling stories.</p>
+  </section>
+  <section class="about-section fade-in">
+    <h3>Our Mission</h3>
+    <p>To bring inspiration and innovation to every athlete* in the world. (*If you have a body, you are an athlete.) We strive to create products that empower people to reach their full potential, regardless of their sport or activity.</p>
+  </section>
+  <section class="about-section fade-in">
+    <h3>Sustainability & Innovation</h3>
+    <p>At Nike, sustainability is at the core of our innovation. We are committed to reducing our environmental impact through sustainable materials, ethical manufacturing practices, and initiatives aimed at preserving our planet for future generations.</p>
+  </section>
+  <section class="about-section fade-in">
+    <h3>Our Community</h3>
+    <p>Nike actively engages with communities worldwide, supporting youth programs, sports initiatives, and social causes. We believe in the power of sport to unite, inspire, and uplift individuals everywhere.</p>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Size Guide</a>
+      <a href="#">Returns</a>
+      <a href="#">Help</a>
+    </div>
+    <p>© 2025 Nike, Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Optional fade-in effect for sections
+  const fadeIns = document.querySelectorAll('.fade-in');
+  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+  fadeIns.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Shopping Cart</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #111;
+    line-height: 1.6;
+  }
+
+  /* Header styles similar to index.html for consistency */
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 2rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #111;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  .nav a:hover {
+    background-color: #eee;
+  }
+
+  .cart-btn {
+    font-size: 1.5rem;
+  }
+
+  .nav-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+    text-decoration: none;
+  }
+
+  /* Main content styles */
+  .main {
+    padding-top: 150px; /* space for header and buttons */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #222;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+
+  th, td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f4f4f4;
+  }
+
+  .total {
+    margin-top: 1rem;
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  /* Button styles */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-top: 2rem;
+    background-color: #DC143C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #a6102f;
+  }
+
+  /* Footer styles */
+  .footer {
+    background: #2C2C2C;
+    color: white;
+    padding: 3rem 2rem 1rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer-links a:hover {
+    color: #DC143C;
+  }
+</style>
+</head>
+<body>
+<!-- Header with navigation -->
+<header class="header">
+  <nav class="nav">
+    <div class="nav-top">
+      <div class="top-buttons">
+        <a href="cart.html" class="cart-btn" title="Cart">🛒</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+    <div class="nav-top" style="width: 100%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; margin: 0 auto;">
+      <a href="index.html" class="logo">NIKE</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<div class="main">
+  <h1>Your Shopping Cart</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Size</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Sample items -->
+      <tr>
+        <td>Air Max 270</td>
+        <td>10</td>
+        <td>1</td>
+        <td>$150</td>
+        <td>$150</td>
+      </tr>
+      <tr>
+        <td>Zoom Fly</td>
+        <td>9</td>
+        <td>2</td>
+        <td>$120</td>
+        <td>$240</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="total">
+    Total: $390
+  </div>
+  <a href="#" class="btn">Proceed to Checkout</a>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Size Guide</a>
+      <a href="#">Returns</a>
+      <a href="#">Help</a>
+    </div>
+    <p>© 2025 Nike, Inc. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

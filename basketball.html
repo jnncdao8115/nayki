@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Basketball - Nike</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #111;
+    line-height: 1.6;
+  }
+
+  /* Header styles */
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 2rem;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #DC143C;
+  }
+
+  /* Section title */
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 6rem 2rem 2rem 2rem; /* margin-top accounts for fixed header */
+    color: #6D6D6D;
+  }
+
+  /* Content styles */
+  .content {
+    max-width: 1200px;
+    margin: 2rem auto 5rem auto;
+    padding: 0 2rem;
+  }
+
+  /* Products grid */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Product card styling */
+  .product-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  }
+
+  .product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .product-card h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Footer styles */
+  .footer {
+    background: #2C2C2C;
+    color: white;
+    padding: 3rem 2rem 1rem;
+    text-align: center;
+  }
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer-links a:hover {
+    color: #DC143C;
+  }
+
+  /* Responsive adjustments */
+  @media(max-width: 768px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<!-- Fixed header navigation -->
+<header class="header">
+  <nav class="nav">
+    <a href="index.html" class="logo">NIKE</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cat.html">Categories</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Section title -->
+<h2 class="section-title" id="basketball">Basketball Collection</h2>
+
+<!-- Products section -->
+<div class="content">
+  <div class="product-grid">
+    <!-- Example product 1 -->
+    <div class="product-card">
+      <img src="b1.avif" alt="Basketball Shoe 1" />
+      <h4>Basketball Shoe 1</h4>
+      <p>$130</p>
+    </div>
+    <!-- Example product 2 -->
+    <div class="product-card">
+      <img src="b2.avif" alt="Basketball Shoe 2" />
+      <h4>Basketball Shoe 2</h4>
+      <p>$150</p>
+    </div>
+    <!-- Example product 3 -->
+    <div class="product-card">
+      <img src="b3.avif" alt="Basketball Shoe 3" />
+      <h4>Basketball Shoe 3</h4>
+      <p>$140</p>
+    </div>
+    <!-- Add more products as needed -->
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Size Guide</a>
+      <a href="#">Returns</a>
+      <a href="#">Help</a>
+    </div>
+    <p>© 2025 Nike, Inc. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
